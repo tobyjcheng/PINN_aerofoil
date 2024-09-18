@@ -70,8 +70,6 @@ NN_p = NN_p[:300, :600]
 NN_p = NN_p.reshape(150, 2, 300, 2).mean(axis=(1, 3)) 
 
 
-NN_p = -NN_p #ONLY INCLUDE IF WEIRD VALUES
-
 with open("C:/Users/Toby/Desktop/Dissertation_Final/"+aerofoil+"/CFD/dump/ru-000002000.dat", "rb") as f:
     CFD_u = np.fromfile(f,dtype='float')
     CFD_u = CFD_u.reshape(150,300)
